@@ -19,13 +19,19 @@ b9 = KeyboardButton('Сандалі_чол')
 b10 = KeyboardButton('Шльопанці')
 b11 = KeyboardButton('Чоботи_чол')
 b12 = KeyboardButton('Туфлі_чол')
-b13 = KeyboardButton('Кросівки_дитячі')
-b14 = KeyboardButton('Гумове_взуття_дитяче')
-b15 = KeyboardButton('Черевики_дитячі')
-b16 = KeyboardButton('Мокасини_дитячі')
-b17 = KeyboardButton('Мешти_дитячі')
-b18 = KeyboardButton('Босоніжки_і_сандалі_дитячі')
-kb1.add(b1).insert(b2).insert(b3).add(b4).insert(b5).insert(b6).add(b7).insert(b8).insert(b9).add(b10).insert(b11).insert(b12).add(b13).insert(b14).insert(b15).add(b16).insert(b17).insert(b18)
+b13 = KeyboardButton('/Кросівки_дитячі_хлопчачі')
+b14 = KeyboardButton('/Гумове_взуття_дитяче_хлопчаче')
+b15 = KeyboardButton('/Черевики_дитячі_хлопчачі')
+b16 = KeyboardButton('/Мокасини_дитячі_хлопчачі')
+b17 = KeyboardButton('/Мешти_дитячі_хлопчачі')
+b18 = KeyboardButton('/Босоніжки_і_сандалі_дитячі_хлопчачі')
+b19 = KeyboardButton('/Кросівки_дитячі_дівчачі')
+b20 = KeyboardButton('/Гумове_взуття_дитяче_дівчаче')
+b21 = KeyboardButton('/Черевики_дитячі_дівчачі')
+b22 = KeyboardButton('/Мокасини_дитячі_дівчачі')
+b23 = KeyboardButton('/Мешти_дитячі_дівчачі')
+b24 = KeyboardButton('/Босоніжки_і_сандалі_дитячі_дівчачі')
+kb1.add(b1).insert(b2).insert(b3).add(b4).insert(b5).insert(b6).add(b7).insert(b8).insert(b9).add(b10).insert(b11).insert(b12).add(b13).insert(b14).insert(b15).add(b16).insert(b17).insert(b18).add(b19).insert(b20).insert(b21).add(b22).insert(b23).insert(b24)
 
 
 kb2 = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -132,7 +138,7 @@ async def insert_product_country(message: types.Message, state: FSMContext):
 
 
 @dp.message_handler(state=ProductForm.photo)
-async def insert_product_color(message: types.Message, state: FSMContext):
+async def insert_product_photo(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['photo'] = message.text
 
@@ -150,7 +156,7 @@ async def insert_product_color(message: types.Message, state: FSMContext):
 
 
 @dp.message_handler(commands=["delete_product"], state="*")
-async def add_product(message: types.Message):
+async def delete_product(message: types.Message):
     await DeleteProductForm.id.set()
     await message.reply(f"What product id to delete for?\n")
 
@@ -169,5 +175,4 @@ async def insert_product_country(message: types.Message, state: FSMContext):
         session.rollback()
         await message.reply(f"Product with it's id: {message.text} wasn't deleted to db. Error{e}")
     await state.finish()
-
 

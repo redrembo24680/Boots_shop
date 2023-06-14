@@ -38,3 +38,4 @@ class Product(Base):
         Unicode(225),
         nullable=False
     )
+

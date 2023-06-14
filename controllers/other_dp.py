@@ -336,6 +336,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Кросівки_дитячі_хлопчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -352,6 +354,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Гумове_взуття_дитяче_хлопчаче'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -368,6 +372,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Черевики_дитячі_хлопчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -384,6 +390,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Мокасини_дитячі_хлопчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -400,6 +408,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Мешти_дитячі_хлопчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -416,6 +426,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Босоніжки_і_сандалі_дитячі_хлопчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -440,6 +452,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Кросівки_дитячі_дівчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -456,6 +470,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Гумове_взуття_дитяче_дівчаче'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -472,6 +488,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Черевики_дитячі_дівчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -488,6 +506,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Мокасини_дитячі_дівчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -504,6 +524,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Мешти_дитячі_дівчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -520,6 +542,8 @@ async def start(message: types.Message):
                            )
     await message.delete()
     for instans in session.query(Product).filter_by(name='Босоніжки_і_сандалі_дитячі_дівчачі'):
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -536,6 +560,8 @@ async def start(message: types.Message):
     await message.delete()
 
     for instans in session.query(Product).filter_by():
+        await bot.send_photo(chat_id=message.from_user.id,
+                             photo=f'{instans.photo}')
         await bot.send_message(chat_id=message.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
@@ -543,13 +569,5 @@ async def start(message: types.Message):
                                     f"розмір: {instans.size}\n"
                                     f"колір: {instans.color}\n"
                                     f"країна виробник: {instans.country}")
-
-
-
-
-
-
-
-
 
 

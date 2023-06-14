@@ -1,4 +1,5 @@
 from .base import Base, session, engine
+from .base import Base
 from .models import Country, Product
 
 __all__ = [
@@ -14,3 +15,4 @@ __all__ = [
 #
 #
 # migrate()
+

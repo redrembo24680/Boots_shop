@@ -6,6 +6,7 @@ __all__ = ['Base']
 
 
 class Country(Base):
+
     __tablename__ = 'Countries'
 
     id = Column(
@@ -18,6 +19,7 @@ class Country(Base):
         unique=True,
         nullable=False
     )
+
 
 
 
