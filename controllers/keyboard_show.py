@@ -23,6 +23,28 @@ ib6 = InlineKeyboardButton(text='Балетки', callback_data='Балетки_
 
 ikb2.add(ib1).insert(ib2).add(ib3).insert(ib4).add(ib5).insert(ib6)
 
+ikb3 = InlineKeyboardMarkup(row_width=2)
+
+ib1 = InlineKeyboardButton(text='Кросівки', callback_data='Кросівки_дитячі_хлопчачі')
+ib2 = InlineKeyboardButton(text='Гумове_взуття_дитяче', callback_data='Гумове_взуття_дитяче_хлопчаче')
+ib3 = InlineKeyboardButton(text='Черевики_дитячі', callback_data='Черевики_дитячі_хлопчачі')
+ib4 = InlineKeyboardButton(text='Мокасини_дитячі', callback_data='Мокасини_дитячі_хлопчачі')
+ib5 = InlineKeyboardButton(text='Мешти_дитячі', callback_data='Мешти_дитячі_хлопчачі')
+ib6 = InlineKeyboardButton(text='Босоніжки_дитячі', callback_data='Босоніжки_дитячі_хлопчачі')
+
+ikb3.add(ib1).insert(ib2).add(ib3).insert(ib4).add(ib5).insert(ib6)
+
+
+ikb4 = InlineKeyboardMarkup(row_width=2)
+
+ib1 = InlineKeyboardButton(text='Кросівки', callback_data='Кросівки_дитячі_дівчачі')
+ib2 = InlineKeyboardButton(text='Кеди', callback_data='Гумове_взуття_дитяче_дівчаче')
+ib3 = InlineKeyboardButton(text='Сандалі', callback_data='Черевики_дитячі_дівчачі')
+ib4 = InlineKeyboardButton(text='Туфлі_на_підборах', callback_data='Мокасини_дитячі_дівчачі')
+ib5 = InlineKeyboardButton(text='Мешти_дитячі', callback_data='Мешти_дитячі_дівчачі')
+ib6 = InlineKeyboardButton(text='Босоніжки_дитячі', callback_data='Босоніжки_дитячі_дівчачі')
+
+ikb4.add(ib1).insert(ib2).add(ib3).insert(ib4).add(ib5).insert(ib6)
 
 kb1 = ReplyKeyboardMarkup(resize_keyboard=True)
 b1 = KeyboardButton('/Доросле')
@@ -38,22 +60,3 @@ kb3 = ReplyKeyboardMarkup(resize_keyboard=True)
 b1 = KeyboardButton('/На_хлопчика')
 b2 = KeyboardButton('/На_дівчинку')
 kb3.add(b1).insert(b2)
-
-
-kb6 = ReplyKeyboardMarkup(resize_keyboard=True)
-b1 = KeyboardButton('/Кросівки_дитячі_хлопчачі')
-b2 = KeyboardButton('/Гумове_взуття_дитяче_хлопчаче')
-b3 = KeyboardButton('/Черевики_дитячі_хлопчачі')
-b4 = KeyboardButton('/Мокасини_дитячі_хлопчачі')
-b5 = KeyboardButton('/Мешти_дитячі_хлопчачі')
-b6 = KeyboardButton('/Босоніжки_і_сандалі_дитячі_хлопчачі')
-kb6.add(b1).insert(b2).insert(b3).add(b4).insert(b5).insert(b6)
-
-kb7 = ReplyKeyboardMarkup(resize_keyboard=True)
-b1 = KeyboardButton('/Кросівки_дитячі_дівчачі')
-b2 = KeyboardButton('/Гумове_взуття_дитяче_дівчаче')
-b3 = KeyboardButton('/Черевики_дитячі_дівчачі')
-b4 = KeyboardButton('/Мокасини_дитячі_дівчачі')
-b5 = KeyboardButton('/Мешти_дитячі_дівчачі')
-b6 = KeyboardButton('/Босоніжки_і_сандалі_дитячі_дівчачі')
-kb7.add(b1).insert(b2).insert(b3).add(b4).insert(b5).insert(b6)
