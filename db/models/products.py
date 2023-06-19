@@ -26,16 +26,15 @@ class Product(Base):
         Float(2),
         nullable=False
     )
-    color = Column(
-        Unicode(225),
-        nullable=False
-    )
-    country = Column(
-        Unicode(225),
-        nullable=False
-    )
     photo = Column(
         Unicode(225),
         nullable=False
     )
-
+    gender = Column(
+        Unicode(225),
+        nullable=False
+    )
+    age_category = Column(
+        Unicode(225),
+        nullable=False
+    )

@@ -3,7 +3,6 @@ from db import Country, session
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram import types
-from sqlalchemy import select, insert, update, delete
 
 
 class CountryForm(StatesGroup):
