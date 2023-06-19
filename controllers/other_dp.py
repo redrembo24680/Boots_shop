@@ -29,7 +29,7 @@ async def start(message: types.Message):
 async def start(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text='Ви вибрали чоловіче взуття! Виберіть тип',
-                           reply_markup=ikb)
+                           reply_markup=ikb1)
     await message.delete()
 
 
@@ -44,195 +44,117 @@ async def boot(call: types.CallbackQuery):
                                     f"ціна: {instans.price}\n"
                                     f"розмір: {instans.size}\n")
 
-# @dp.message_handler(commands=['Кросівки_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі кросівки!')
-#
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='кросівки_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-#
-#
-# @dp.message_handler(commands=['Киди_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі кеди!')
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='Киди_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-#
-#
-# @dp.message_handler(commands=['Сандалі_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі сандалі!', )
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='Сандалі_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-#
-#
-# @dp.message_handler(commands=['Шльопанці_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі шльпанці!')
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='Шльопанці_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-#
-#
-# @dp.message_handler(commands=['Чоботи_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі чоботи!')
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='Чоботи_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-#
-#
-# @dp.message_handler(commands=['Туфлі_чол'])
-# async def start(message: types.Message):
-#     await bot.send_message(chat_id=message.from_user.id,
-#                            text='Ви вибрали чоловічі туфлі!')
-#     await message.delete()
-#     for instans in session.query(Product).filter_by(name='Туфлі_чол'):
-#         await bot.send_photo(chat_id=message.from_user.id,
-#                              photo=f'{instans.photo}')
-#         await bot.send_message(chat_id=message.from_user.id,
-#                                text=f"Ім'я: {instans.name}\n"
-#                                     f"id: {instans.id}\n"
-#                                     f"ціна: {instans.price}\n"
-#                                     f"розмір: {instans.size}\n")
-
 
 @dp.message_handler(commands=['Жіноче'])
 async def start(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text='Ви вибрали жіноче взуття! Виберіть тип',
-                           reply_markup=kb4)
+                           reply_markup=ikb2)
     await message.delete()
 
 
-@dp.message_handler(commands=['Кросівки_жін'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали жіночі кросівки!')
-    await message.delete()
-
-    for instans in session.query(Product).filter_by(name='Кросівки_жін'):
-        await bot.send_photo(chat_id=message.from_user.id,
+@dp.callback_query_handler(text_contains='жін')
+async def boot(call: types.CallbackQuery):
+    for instans in session.query(Product).filter_by(name=call.data):
+        await bot.send_photo(chat_id=call.from_user.id,
                              photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
+        await bot.send_message(chat_id=call.from_user.id,
                                text=f"Ім'я: {instans.name}\n"
                                     f"id: {instans.id}\n"
                                     f"ціна: {instans.price}\n"
                                     f"розмір: {instans.size}\n")
 
 
-@dp.message_handler(commands=['Кеди_жін'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали жіночі кеди!')
-    await message.delete()
-    for instans in session.query(Product).filter_by(name='Кеди_жін'):
-        await bot.send_photo(chat_id=message.from_user.id,
-                             photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
-                               text=f"Ім'я: {instans.name}\n"
-                                    f"id: {instans.id}\n"
-                                    f"ціна: {instans.price}\n"
-                                    f"розмір: {instans.size}\n")
-
-
-@dp.message_handler(commands=['Сандалі_жін'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали жіночі сандалі!')
-    await message.delete()
-    for instans in session.query(Product).filter_by(name='Сандалі_жін'):
-        await bot.send_photo(chat_id=message.from_user.id,
-                             photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
-                               text=f"Ім'я: {instans.name}\n"
-                                    f"id: {instans.id}\n"
-                                    f"ціна: {instans.price}\n"
-                                    f"розмір: {instans.size}\n")
-
-
-@dp.message_handler(commands=['Туфлі_на_підборах'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали туфлі на підборах!')
-    await message.delete()
-    for instans in session.query(Product).filter_by(name='Туфлі_на_підборах'):
-        await bot.send_photo(chat_id=message.from_user.id,
-                             photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
-                               text=f"Ім'я: {instans.name}\n"
-                                    f"id: {instans.id}\n"
-                                    f"ціна: {instans.price}\n"
-                                    f"розмір: {instans.size}\n")
-
-
-@dp.message_handler(commands=['Чоботи_жін'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали жіночі чоботи!')
-    await message.delete()
-    for instans in session.query(Product).filter_by(name='Чоботи_жін'):
-        await bot.send_photo(chat_id=message.from_user.id,
-                             photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
-                               text=f"Ім'я: {instans.name}\n"
-                                    f"id: {instans.id}\n"
-                                    f"ціна: {instans.price}\n"
-                                    f"розмір: {instans.size}\n")
-
-
-@dp.message_handler(commands=['Балетки'])
-async def start(message: types.Message):
-    await bot.send_message(chat_id=message.from_user.id,
-                           text='Ви вибрали жіночі балетки!')
-    await message.delete()
-    for instans in session.query(Product).filter_by(name='Балетки'):
-        await bot.send_photo(chat_id=message.from_user.id,
-                             photo=f'{instans.photo}')
-        await bot.send_message(chat_id=message.from_user.id,
-                               text=f"Ім'я: {instans.name}\n"
-                                    f"id: {instans.id}\n"
-                                    f"ціна: {instans.price}\n"
-                                    f"розмір: {instans.size}\n"
-                               )
+# @dp.message_handler(commands=['Кросівки_жін'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали жіночі кросівки!')
+#     await message.delete()
+#
+#     for instans in session.query(Product).filter_by(name='Кросівки_жін'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n")
+#
+#
+# @dp.message_handler(commands=['Кеди_жін'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали жіночі кеди!')
+#     await message.delete()
+#     for instans in session.query(Product).filter_by(name='Кеди_жін'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n")
+#
+#
+# @dp.message_handler(commands=['Сандалі_жін'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали жіночі сандалі!')
+#     await message.delete()
+#     for instans in session.query(Product).filter_by(name='Сандалі_жін'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n")
+#
+#
+# @dp.message_handler(commands=['Туфлі_на_підборах'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали туфлі на підборах!')
+#     await message.delete()
+#     for instans in session.query(Product).filter_by(name='Туфлі_на_підборах'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n")
+#
+#
+# @dp.message_handler(commands=['Чоботи_жін'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали жіночі чоботи!')
+#     await message.delete()
+#     for instans in session.query(Product).filter_by(name='Чоботи_жін'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n")
+#
+#
+# @dp.message_handler(commands=['Балетки'])
+# async def start(message: types.Message):
+#     await bot.send_message(chat_id=message.from_user.id,
+#                            text='Ви вибрали жіночі балетки!')
+#     await message.delete()
+#     for instans in session.query(Product).filter_by(name='Балетки'):
+#         await bot.send_photo(chat_id=message.from_user.id,
+#                              photo=f'{instans.photo}')
+#         await bot.send_message(chat_id=message.from_user.id,
+#                                text=f"Ім'я: {instans.name}\n"
+#                                     f"id: {instans.id}\n"
+#                                     f"ціна: {instans.price}\n"
+#                                     f"розмір: {instans.size}\n"
+#                                )
 
 
 @dp.message_handler(commands=['Дитяче'])
