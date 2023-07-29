@@ -1,4 +1,4 @@
-from sqlalchemy.orm import declarative_base, Session
+from sqlalchemy.orm import declarative_base
 from settings import Settings
 import logging
 from sqlalchemy import create_engine
@@ -11,12 +11,4 @@ logging.basicConfig(level=logging.INFO)
 engine = create_engine(Settings.DATABASE)
 meta = Base.metadata
 session = Session(engine)
-
-
-
-
-
-
-
-
 

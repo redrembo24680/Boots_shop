@@ -6,7 +6,7 @@ __all__ = ['Base']
 
 
 class Product(Base):
-    __tablename__ = 'Products'
+    __tablename__ = 'products'
 
     id = Column(
         BigInteger,

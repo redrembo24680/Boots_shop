@@ -1,5 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ContentType, Message, InlineKeyboardMarkup, \
-    InlineKeyboardButton
+    InlineKeyboardButton, ReplyKeyboardRemove
 
 ikb1 = InlineKeyboardMarkup(row_width=2)
 
@@ -10,7 +10,7 @@ ib4 = InlineKeyboardButton(text='Чоботи', callback_data='Чоботи_чо
 ib5 = InlineKeyboardButton(text='Туфлі', callback_data='Туфлі_чол')
 ib6 = InlineKeyboardButton(text='Сандалі', callback_data='Сандалі_чол')
 
-ikb1.add(ib1).insert(ib2).add(ib3).insert(ib4).add(ib5).insert(ib6)
+ikb1.add(ib1).insert(ib2).insert(ib3).add(ib4).insert(ib5).insert(ib6)
 
 ikb2 = InlineKeyboardMarkup(row_width=2)
 
