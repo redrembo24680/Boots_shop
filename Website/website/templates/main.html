@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Головна сторінка
+{% endblock %}
+
+
+{% block body %}
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 default_cursor_cs">
+                <h1 class="text-center text-white"></h1>
+                <div class="itd_play" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="itd_triangle"></div>
+                </div>
+                <a href="#footer" class="btn btn-itd btn-lg text-uppercase default_pointer_cs"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="nav1">
+        <div class="container-fluid">
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register">Register</a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="dropdown">
+        <nav id="primary_nav_wrap">
+            <ul>
+                <li><a href="{{ url_for('products') }}&age_category=Доросле">Доросле</a>
+                    <ul>
+                        <li class="dir"><a href="{{ url_for('products') }}&gender=Жіноче">Жіноче
+                        </a>
+                            <ul>
+                                <li><a href="{{ url_for('products') }}?name=Кросівки_жін&gender=Жіноче">Кросівки</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Кеди_жін&gender=Жіноче">Куди</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Сандалі_жін&gender=Жіноче">Сандалі</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Туфлі_на_підборах_жінs&gender=Жіноче">взуття на підборах</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Чоботи_жін&gender=Жіноче">Черевики</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Балетки_жін&gender=Жіноче">Балетки</a></li>
+                            </ul>
+                        </li>
+                        <li class="dir"><<a href="{{ url_for('products') }}&gender=Чоловіче">Чоловіче
+                            </a>
+                            <ul>
+
+                                <li><a href="{{ url_for('products') }}?name=Шльопанці_чол&gender=Чоловіче">Шльпанці</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Кросівки_чол&gender=Чоловіче">Кросівки</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Кеди_чол&gender=Чоловіче">Кеди</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Чоботи_чолs&gender=Чоловіче">Чоботи</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Туфлі_чол&gender=Чоловіче">Туфлі</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Сандалі_чол&gender=Чоловіче">Сандалі</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <a
+                        class="text-reset me-3 dropdown-toggle hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <i class="fas fa-bell"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#">Some news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Another news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <a
+                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuAvatar"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            class="rounded-circle"
+                            height="25"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                    />
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="/profile">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="country">Country</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/add-icon">add icon</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</nav>
+
+
+<div class="news">
+    <div id="slideshow1">
+        <h1><b>Новинки</b></h1>
+        <div class="slide-wrapper">
+            <div class="slide"><img src="{{ url_for('static', filename='img/1.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/2.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/3.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/4.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/5.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="slideshow2">
+        <h1><b>Розпродаж</b></h1>
+        <div class="slide-wrapper">
+            <div class="slide"><img src="{{ url_for('static', filename='img/1.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/2.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/3.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/4.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/5.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+        </div>
+    </div>
+    <div id="slideshow3">
+        <h1><b>Знижки</b></h1>
+        <div class="slide-wrapper">
+            <div class="slide"><img src="{{ url_for('static', filename='img/1.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/2.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/3.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/4.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+            <div class="slide"><img src="{{ url_for('static', filename='img/5.jpg') }}" height="560px"
+                                    width="420px"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

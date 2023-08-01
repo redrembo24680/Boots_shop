@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="login-form">
+    <div class="container">
+        <center><h1 class="fs-1 text-muted default_cursor_cs">Форма авторизації</h1></center>
+        <main class="form-signin w-100 m-auto default_cursor_cs">
+            <form class="default_cursor_cs" action="" method="post">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" name="email" placeholder="email">
+                    <label for="floatingPassword">Email</label>
+                </div>
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="password" class="form-control" name="password" placeholder="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <br>
+                <button class="w-100 btn btn-lg btn-primary default_pointer_cs" type="submit">Ввійти</button>
+            </form>
+        </main>
+    </div>
+</div>
+
+{% endblock %}
+
+

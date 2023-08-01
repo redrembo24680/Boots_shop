@@ -1,0 +1,285 @@
+:root{
+    --color1: #141111;
+    --color2: #ff00f5;
+}
+header{
+    padding: 90px 0;
+}
+header {
+    background: url(../img/Free_style.png), var(--color1)
+    background: url(../img/Free_style.png), -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: url(../img/Free_style.png), -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: url(../img/Free_style.png), linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
+    filter: url(../img/Free_style.png), progid:DXImageTransform.Microsoft.gradient( startColor=var(--color1), endColor=var(--color2), GradientType=1);
+    background-size: contain;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: #9400D3;
+  left: -25%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  left: -300%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+#slideshow1 {
+  text-align: center;
+  overflow: hidden;
+  height: 560px;
+  width: 420px;
+  margin: 144px;
+}
+#slideshow2 {
+  text-align: center;
+  overflow: hidden;
+  height: 560px;
+  width: 420px;
+  margin: 144px;
+}
+#slideshow3 {
+  text-align: center;
+  overflow: hidden;
+  height: 560px;
+  width: 420px;
+  margin: 144px;
+}
+.slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 560px;
+  width: 420px;
+}
+
+.slide:nth-child(1) {
+  background: #D93B65;
+}
+
+.slide:nth-child(2) {
+  background: #037E8C;
+}
+
+.slide:nth-child(3) {
+  background: #36BF66;
+}
+
+.slide:nth-child(4) {
+  background: #D9D055;
+}
+
+.slide-number {
+  color: #000;
+  text-align: center;
+  font-size: 10em;
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -420px;}
+  50% {margin-left: -420px;}
+  60% {margin-left: -840px;}
+  70% {margin-left: -840px;}
+  80% {margin-left: -1260px;}
+  90% {margin-left: -1260px;}
+}
+.news {
+    display: flex;
+}
+.nav1 {
+    background: #FFDEAD;
+    background: #FFDEAD;
+    background: #FFDEAD;
+    background: #FFDEAD;
+    filter: #FFDEAD;
+    display: flex;
+    width: 100%;
+}
+
+.registering {
+    margin: 90px;
+}
+
+.register-form {
+    height: 70px;
+    margin: 90px;
+}
+
+.login-form {
+    height: 70px;
+    margin: 210px;
+}
+
+.country {
+    margin: 190px;
+    width 100%;
+}
+
+.add_icon {
+    margin: 300px;
+    line-height: 1.5;
+}
+
+.imgsize{
+     width: 300px;
+     height: 400px;
+     left: 160px;
+     transition: 1s;
+     padding: 15px;
+}
+
+.img-scale:hover {
+
+		transform: scale(1.2);
+
+}
+
+.profile {
+    display: flex;
+    padding: 15px;
+
+}
+.find_boots{
+    margin: 600;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 400;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+#primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+#primary_nav_wrap ul li
+{
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+	background:#ddd
+}
+
+#primary_nav_wrap ul li:hover
+{
+	background:#f6f6f6
+}
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+#primary_nav_wrap ul ul li
+{
+	float:none;
+	width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block
+}
+
+
+
+
+

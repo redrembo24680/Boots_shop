@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% block title %}{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="add_icon">
+        <center><h1>Завантаження іконки профілю</h1>
+            <form method="POST" action="/add-icon" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Завантажити">
+            </form>
+        </center>
+    </div>
+
+{% endblock %}
+

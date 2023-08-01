@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="registering">
+    <div class="container">
+        <center><h1 class="fs-1 text-muted default_cursor_cs">Форма реєстрації</h1></center>
+        <main class="form-signin w-100 m-auto default_cursor_cs">
+            <form class="default_cursor_cs" action="" method="post">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="first_name" placeholder="First name">
+                    <label for="floatingPassword">First name</label>
+                </div>
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="second_name" placeholder="Second name">
+                    <label for="floatingPassword">Second name</label>
+                </div>
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" name="email"
+                           placeholder="name@example.com"><br>
+                    <label for="floatingInput">Email address</label>
+                </div>
+
+
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" name="password"
+                           placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="date" class="form-control" name="date" placeholder="date">
+                    <label for="floatingPassword">Date</label>
+                </div>
+
+                <br>
+
+                <div class="form-floating">
+
+                    <select id="country" name="country" class="form-control">
+                        <option value="" selected>Choose a Country:</option>
+                        {% for country in countries %}
+                            <option value="{{country.id}}">{{country.tittle}}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
+
+                <div class="checkbox mb-3 default_cursor_cs">
+                    <label class="default_cursor_cs">
+                        <input type="checkbox" value="remember-me">
+                        <p class="fs-6 text-muted default_cursor_cs">Запам'ятати мене</p>
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary default_pointer_cs" type="submit">Зареєстуватись</button>
+            </form>
+        </main>
+    </div>
+</div>
+
+{% endblock %}
+

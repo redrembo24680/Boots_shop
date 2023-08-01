@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% block title %}{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+<div class="col default_cursor_cs">
+    <div class="card shadow-sm default_cursor_cs">
+        <img src="{{ url_for('static', filename='file_3.jpg') }}" height="572" width="428" />
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" class="default_cursor_cs"></rect>
+        </svg>
+        <div class="card-body default_cursor_cs">
+            <p class="card-text default_cursor_cs">{% for product in products %}
+            <p>Ім'я: {{ product.name }}</p>
+            <p>id: {{ product.id }}</p>
+            <p>ціна: {{ product.price }}</p>
+            <p>розмір: {{ product.size }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
