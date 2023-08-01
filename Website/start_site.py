@@ -1,6 +1,5 @@
-from website import app
-from website import routes, sort_routes
-from db import Users, session, Country
+from Website.website import app
+from Website.website import routes, sort_routes
 
 if __name__ == "__main__":
     app.run(debug=True)

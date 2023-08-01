@@ -90,7 +90,7 @@ async def insert_product_photo(message: types.Message, state: FSMContext):
         photo_id = photo.file_id
         files = await bot.get_file(photo_id)
         file_paths = files.file_path
-        await bot.download_file(file_paths, f'..boots_shop/{file_name}')
+        await bot.download_file(file_paths, f'db/static/photos/{file_name}')
         data['photo'] = file_name
 
     try:
