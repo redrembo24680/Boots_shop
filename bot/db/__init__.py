@@ -1,12 +1,13 @@
 from .base import Base, session, engine
 from .base import Base
-from .models import Users, Country, Products
+from .models import Users, Country, Products, Orders
 
 __all__ = [
     "Base",
     "Users",
     "Country",
-    "Products"
+    "Products",
+    "Orders"
 ]
 
 
@@ -23,6 +24,6 @@ __all__ = [
 #     # session.add_all(mss)
 #     # session.commit()
 #
-#
+
 # migrate()
 

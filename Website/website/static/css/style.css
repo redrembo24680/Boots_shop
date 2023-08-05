@@ -279,7 +279,36 @@ header {
 	display:block
 }
 
+main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 1rem;
+    }
 
+.product-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+.product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+.product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+.product-price {
+      color: #009900;
+      font-weight: bold;
+    }
 
 
 

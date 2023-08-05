@@ -19,6 +19,5 @@ class Country(Base):
         unique=True,
         nullable=False
     )
-    # users = relationship('users', backref=__tablename__)
 
 

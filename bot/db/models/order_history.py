@@ -13,12 +13,6 @@ class Order_history(Base):
         primary_key=True,
         autoincrement=True
     )
-    order_id = Column(
-        Integer,
-        ForeignKey('orders.id'),
-        unique=True,
-        nullable=False
-    )
     date = Column(
         Date,
         unique=False,

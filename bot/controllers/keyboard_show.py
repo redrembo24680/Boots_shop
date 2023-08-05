@@ -51,12 +51,19 @@ b1 = KeyboardButton('/Доросле')
 b2 = KeyboardButton('/Дитяче')
 kb1.add(b1).insert(b2)
 
-kb2 = ReplyKeyboardMarkup(resize_keyboard=True)
+kb2 = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 b1 = KeyboardButton('/Чоловіче')
 b2 = KeyboardButton('/Жіноче')
 kb2.add(b1).insert(b2)
 
-kb3 = ReplyKeyboardMarkup(resize_keyboard=True)
+kb3 = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 b1 = KeyboardButton('/На_хлопчика')
 b2 = KeyboardButton('/На_дівчинку')
 kb3.add(b1).insert(b2)
+
+kb4 = ReplyKeyboardMarkup(resize_keyboard=True)
+
+b1 = KeyboardButton(text='/КУПИТИ',)
+
+kb4.add(b1)
+

@@ -84,36 +84,43 @@
             </ul>
         </nav>
         </div>
+        <div class="dropdown">
+        <nav id="primary_nav_wrap">
+            <ul>
+                <li><a href="{{ url_for('products') }}&age_category=Дитяче">Дитяче</a>
+                    <ul>
+                        <li class="dir"><a href="{{ url_for('products') }}&gender=На_дівчинку">На_дівчинку
+                        </a>
+                            <ul>
+                                <li><a href="{{ url_for('products') }}?name=Кросівки_дитячі&gender=На_дівчинку">Кросівки</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Гумове_взуття_дитяче&gender=На_дівчинку">Гумове_взуття</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Черевики_дитячі&gender=На_дівчинку">Черевики</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Мокасини_дитячіs&gender=На_дівчинку">Мокасини</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Мешти_дитячі&gender=На_дівчинку">Мешти</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Босоніжки_дитячі&gender=На_дівчинку">Босоніжки</a></li>
+                            </ul>
+                        </li>
+                        <li class="dir"><<a href="{{ url_for('products') }}&gender=На_хлопчика">На_хлопчика
+                            </a>
+                            <ul>
 
-        <div class="d-flex align-items-center">
-            <div class="dropdown">
-                <a
-                        class="text-reset me-3 dropdown-toggle hidden-arrow"
-                        href="#"
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                >
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                </a>
-                <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuLink"
-                >
-                    <li>
-                        <a class="dropdown-item" href="#">Some news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Another news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                </ul>
-            </div>
+                                <li><a href="{{ url_for('products') }}?name=Кросівки_дитячі&gender=На_хлопчика">Кросівки</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Гумове_взуття&gender=На_хлопчика">Гумове_взуття</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Черевики_дитячі&gender=На_хлопчика">Черевики</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Мокасини_дитячіs&gender=На_хлопчика">Мокасини</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Мешти_дитячі&gender=На_хлопчика">Мешти</a></li>
+                                <li><a href="{{ url_for('products') }}?name=Босоніжки_дитячі&gender=На_хлопчика">Босоніжки</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         </div>
+
+
         <div class="d-flex align-items-center">
             <div class="dropdown">
                 <a
@@ -137,19 +144,7 @@
                         aria-labelledby="navbarDropdownMenuAvatar"
                 >
                     <li>
-                        <a class="dropdown-item" href="/profile">My profile</a>
-                    </li>
-                    <li>
                         <a class="dropdown-item" href="country">Country</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="/add-icon">add icon</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Settings</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Logout</a>
                     </li>
                 </ul>
             </div>

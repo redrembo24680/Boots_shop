@@ -15,10 +15,6 @@ class ProductForm(StatesGroup):
     photo = State()
 
 
-class DeleteProductForm(StatesGroup):
-    id = State()
-
-
 @dp.message_handler(commands=["add_product"], state="*")
 async def add_product(message: types.Message):
     await ProductForm.next()
@@ -106,25 +102,4 @@ async def insert_product_photo(message: types.Message, state: FSMContext):
 
     await state.finish()
 
-
-@dp.message_handler(commands=["delete_product"], state="*")
-async def delete_product(message: types.Message):
-    await DeleteProductForm.id.set()
-    await message.reply(f"What product id to delete for?\n")
-
-
-@dp.message_handler(state=DeleteProductForm.id)
-async def insert_product_country(message: types.Message, state: FSMContext):
-    async with state.proxy() as data:
-        data['id'] = message.text
-
-    try:
-        for delete_product in session.query(Products).filter_by(id=data.get('id')):
-            session.delete(delete_product)
-            session.commit()
-            await message.reply(f"Product with id: {message.text} was deleted from db")
-    except Exception as e:
-        session.rollback()
-        await message.reply(f"Product with it's id: {message.text} wasn't deleted to db. Error{e}")
-    await state.finish()
 

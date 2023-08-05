@@ -63,7 +63,7 @@ def login():
 
         if user and check_password_hash(user.password, password):
             session['email'] = user.email
-            return redirect(url_for('profile'))
+            return redirect(url_for('main'))
 
         return 'Невірні дані для входу'
 
@@ -88,40 +88,3 @@ def country():
         return render_template("country.html")
 
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
-
-
-# @app.route('/profile', methods=['GET', 'POST'])
-# def profile():
-#         if request.method == 'POST':
-#         file = request.files['file']
-#
-#         if file and allowed_file(file.filename):
-#             filename = secure_filename(file.filename)
-#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#             return redirect(url_for('profile', filename=filename))
-#
-#     return render_template('profile.html')
-
-@app.route('/profile', methods=['GET', 'POST'])
-def profile():
-    if request.method == 'POST':
-        file = request.files['file']
-
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('profile_2', filename=filename))
-
-    return render_template('profile.html')
-
-
-@app.route('/profile_2/<filename>')
-def profile_2(filename):
-    return render_template('profile2.html', filename=filename)
-
-# @app.route('/profile2', methods=['GET', 'POST'])
-# def profile2():
-#     return render_template('profile2.html')

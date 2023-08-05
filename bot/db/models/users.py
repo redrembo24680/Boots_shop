@@ -44,4 +44,3 @@ class Users(Base):
         backref=__tablename__
     )
 
-    # order = relationship('orders', backref="users")
